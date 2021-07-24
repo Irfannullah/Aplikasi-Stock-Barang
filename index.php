@@ -20,13 +20,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="https://fti.uad.ac.id/safety-laboratory-dan-pengenalan-alat-laboratorium-teknik-kimia/">
-        <img src="logouad.png" width="90px">Lab Teknik Informatika</a>
+            <a class="navbar-brand ps-3" href="https://api.whatsapp.com/send?phone=6282238513766">
+        <img src="marketplace.png" width="50px" style="background-color: silver;">Irfan Store</a>
         <a class="navbar-brand ps-3" ></a>
             <a class="navbar-brand ps-3" href="index.php">Stockbarang</a>
             <a class="navbar-brand ps-3" href="masuk.php">Barang Masuk </a>
@@ -50,17 +50,20 @@
                     </ul>
                 </li>
             </ul>
-        </nav>
-
-
+        </nav><br>
+        
             <div id="layoutSidenav_content">
                 <main>
-                    <br>
-                    <br>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">StockBarang</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">StockBarang</li>
+                            Contact
+                            <li class="breadcrumb-item active"><a href="https://api.whatsapp.com/send?phone=6282238513766">
+                        <img src="logotelfon.png" width="50px"></a>
+                            </li>
+                            <li class="breadcrumb-item active"><a href="https://www.instagram.com/p/CDEINzfjpLG/?utm_medium=copy_link">
+                        <img src="IG.png" width="50px"></a>
+                            </li>
                         </ol>
                         
                         <div class="card mb-4">
@@ -108,7 +111,7 @@
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Irfannullah 2000018145</div>
+                            <div class="text-muted">Copyright &copy; 16 Agustus 2021</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
