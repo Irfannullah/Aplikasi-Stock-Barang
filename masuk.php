@@ -12,23 +12,21 @@
         <meta name="author" content="" />
         <title>Barang Masuk</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-        <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
-        <!-- pemanggilan script unutk modals -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <a class="navbar-brand ps-3" href="https://fti.uad.ac.id/safety-laboratory-dan-pengenalan-alat-laboratorium-teknik-kimia/">
-        <img src="logouad.png" width="90px">Lab Teknik Informatika</a>
+            <img src="marketplace.png" width="50px" style="background-color: silver;">Irfan Store</a>
         <a class="navbar-brand ps-3" ></a>
-            <a class="navbar-brand ps-3" href="index.php">Lab Informatika</a>
+            <a class="navbar-brand ps-3" href="index.php">StockBarang</a>
             <a class="navbar-brand ps-3" href="masuk.php">Barang Masuk </a>
             <a class="navbar-brand ps-3" href="keluar.php">Barang keluar</a>
 
@@ -39,7 +37,7 @@
                     <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
                 </div>
             </form>
-            <!-- Navbar profil login-->
+            <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
@@ -65,13 +63,18 @@
                 </nav>
             </div>
             <div id="layoutSidenav_content">
-                <!-- main program body -->
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Barang Masuk</h1>
-                        <ol class="breadcrumb mb-4">
 
-                            <li class="breadcrumb-item active">Tables</li>
+                        <ol class="breadcrumb mb-4">
+                            Contact
+                            <li class="breadcrumb-item active"><a href="https://api.whatsapp.com/send?phone=6282238513766">
+                        <img src="logotelfon.png" width="50px"></a>
+                            </li>
+                            <li class="breadcrumb-item active"><a href="https://www.instagram.com/p/CDEINzfjpLG/?utm_medium=copy_link">
+                        <img src="IG.png" width="50px"></a>
+                            </li>
                         </ol>
                         </div>
 
@@ -82,7 +85,6 @@
                             Tambah Barang Masuk
                         </button>
                         
-                        <!-- kolom nama nama menu di tabel -->
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
@@ -105,7 +107,7 @@
                                             ?>
 
                                         <tr>
-                                        <td><?=date('D-d-M-Y h-i-s-a',strtotime($tanggal));?></td>
+                                            <td><?=$tanggal;?></td>
                                             <td><?=$namabarang;?></td>
                                             <td><?=$qty;?></td>
                                             <td><?=$keterangan;?></td>
@@ -119,12 +121,10 @@
                         </div>
                     </div>
                 </main>
-
-                <!-- footer  -->
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Irfannullah 2000018145</div>
+                        <div class="text-muted">Copyright &copy; 16 Agustus 2021</div>                            
                         <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
@@ -140,8 +140,6 @@
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
     </body>
-
-
        <!-- The Modal -->
   <div class="modal fade" id="myModal" >
     <div class="modal-dialog">
@@ -149,16 +147,14 @@
       
         <!-- Modal Header -->
         <div class="modal-header">
-            <!-- buton tambah barang  -->
-        <h4 class="modal-title">Tambah Barang masuk </h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Tambah Barang</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         
         <!-- Modal body -->
         <form method="POST">
         <div class="modal-body">
-                            
-            <select name="barangnya" class="from-control"> 
+            <select name="barangnya" class="from-control">
             <?php
             $ambilsemuadatanya = mysqli_query($conn," select * from stock");
             while( $fetcharray = mysqli_fetch_array($ambilsemuadatanya)){
@@ -180,12 +176,12 @@
         </div>
         
         </form>
-
         <!-- Modal footer -->
         <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         </div>
-        </div>
+        
+      </div>
     </div>
   </div>
 </html>
